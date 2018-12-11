@@ -1,0 +1,35 @@
+{
+  "name": "db-migrations-sequelize",
+  "version": "0.1.0",
+  "description": "Migrations for Sequelize",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "prettier -l '**/!(*.d).{ts,tsx}' && tslint --project tsconfig.json"
+  },
+  "peerDependencies": {
+    "sequelize": "^4.41.2"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/node": "^8.0.57",
+    "@types/sequelize": "^4.27.33",
+    "precise-commits": "^1.0.2",
+    "prettier": "1.15.1",
+    "sequelize": "^4.41.2",
+    "ts-loader": "^4.2.0",
+    "tslib": "^1.9.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits --check-only"
+    }
+  }
+}
